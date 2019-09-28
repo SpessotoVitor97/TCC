@@ -1,0 +1,35 @@
+C:\Users\spess\source\repos\Software_Supervisório\bin\Debug\Acesso.mdb
+C:\Users\spess\source\repos\Software_Supervisório\bin\Debug\Software_Supervisório.exe.config
+C:\Users\spess\source\repos\Software_Supervisório\bin\Debug\Software_Supervisório.exe
+C:\Users\spess\source\repos\Software_Supervisório\bin\Debug\Software_Supervisório.pdb
+C:\Users\spess\source\repos\Software_Supervisório\bin\Debug\Software_Supervisório.xml
+C:\Users\spess\source\repos\Software_Supervisório\obj\Debug\Software_Supervisório.vbprojAssemblyReference.cache
+C:\Users\spess\source\repos\Software_Supervisório\obj\Debug\Software_Supervisório.Form1.resources
+C:\Users\spess\source\repos\Software_Supervisório\obj\Debug\Software_Supervisório.Resources.resources
+C:\Users\spess\source\repos\Software_Supervisório\obj\Debug\Software_Supervisório.vbproj.GenerateResource.cache
+C:\Users\spess\source\repos\Software_Supervisório\obj\Debug\Software_Supervisório.vbproj.CoreCompileInputs.cache
+C:\Users\spess\source\repos\Software_Supervisório\obj\Debug\Software_Supervisório.exe
+C:\Users\spess\source\repos\Software_Supervisório\obj\Debug\Software_Supervisório.xml
+C:\Users\spess\source\repos\Software_Supervisório\obj\Debug\Software_Supervisório.pdb
+C:\Users\spess\source\repos\Software_Supervisório\obj\Debug\Software_Supervisório.Novo_Equipamento.resources
+C:\Users\spess\source\repos\Software_Supervisório\obj\Debug\Software_Supervisório.Alterar_Equipamento.resources
+C:\Users\spess\Desktop\Trab vitor\FATEC\Automação AIM\TCC\06 - PROGRAMAS\Supervisório\Software_Supervisório\bin\Debug\Acesso.mdb
+C:\Users\spess\Desktop\Trab vitor\FATEC\Automação AIM\TCC\06 - PROGRAMAS\Supervisório\Software_Supervisório\bin\Debug\Software_Supervisório.exe.config
+C:\Users\spess\Desktop\Trab vitor\FATEC\Automação AIM\TCC\06 - PROGRAMAS\Supervisório\Software_Supervisório\bin\Debug\Software_Supervisório.exe
+C:\Users\spess\Desktop\Trab vitor\FATEC\Automação AIM\TCC\06 - PROGRAMAS\Supervisório\Software_Supervisório\bin\Debug\Software_Supervisório.pdb
+C:\Users\spess\Desktop\Trab vitor\FATEC\Automação AIM\TCC\06 - PROGRAMAS\Supervisório\Software_Supervisório\bin\Debug\Software_Supervisório.xml
+C:\Users\spess\Desktop\Trab vitor\FATEC\Automação AIM\TCC\06 - PROGRAMAS\Supervisório\Software_Supervisório\obj\Debug\Software_Supervisório.vbprojAssemblyReference.cache
+C:\Users\spess\Desktop\Trab vitor\FATEC\Automação AIM\TCC\06 - PROGRAMAS\Supervisório\Software_Supervisório\obj\Debug\Software_Supervisório.Alterar_Equipamento.resources
+C:\Users\spess\Desktop\Trab vitor\FATEC\Automação AIM\TCC\06 - PROGRAMAS\Supervisório\Software_Supervisório\obj\Debug\Software_Supervisório.Form1.resources
+C:\Users\spess\Desktop\Trab vitor\FATEC\Automação AIM\TCC\06 - PROGRAMAS\Supervisório\Software_Supervisório\obj\Debug\Software_Supervisório.Resources.resources
+C:\Users\spess\Desktop\Trab vitor\FATEC\Automação AIM\TCC\06 - PROGRAMAS\Supervisório\Software_Supervisório\obj\Debug\Software_Supervisório.Novo_Equipamento.resources
+C:\Users\spess\Desktop\Trab vitor\FATEC\Automação AIM\TCC\06 - PROGRAMAS\Supervisório\Software_Supervisório\obj\Debug\Software_Supervisório.vbproj.GenerateResource.cache
+C:\Users\spess\Desktop\Trab vitor\FATEC\Automação AIM\TCC\06 - PROGRAMAS\Supervisório\Software_Supervisório\obj\Debug\Software_Supervisório.vbproj.CoreCompileInputs.cache
+C:\Users\spess\Desktop\Trab vitor\FATEC\Automação AIM\TCC\06 - PROGRAMAS\Supervisório\Software_Supervisório\obj\Debug\Software_Supervisório.exe
+C:\Users\spess\Desktop\Trab vitor\FATEC\Automação AIM\TCC\06 - PROGRAMAS\Supervisório\Software_Supervisório\obj\Debug\Software_Supervisório.xml
+C:\Users\spess\Desktop\Trab vitor\FATEC\Automação AIM\TCC\06 - PROGRAMAS\Supervisório\Software_Supervisório\obj\Debug\Software_Supervisório.pdb
+C:\Users\spess\Desktop\Trab vitor\FATEC\Automação AIM\TCC\06 - PROGRAMAS\Supervisório\Software_Supervisório\obj\Debug\Software_Supervisório.LoginForm1.resources
+C:\Users\spess\Desktop\Trab vitor\FATEC\Automação AIM\TCC\06 - PROGRAMAS\Supervisório\Software_Supervisório\obj\Debug\Software_Supervisório.Localidades.resources
+C:\Users\spess\Desktop\Trab vitor\FATEC\Automação AIM\TCC\06 - PROGRAMAS\Supervisório\Software_Supervisório\obj\Debug\Software_Supervisório.Unidade1.resources
+C:\Users\spess\Desktop\Trab vitor\FATEC\Automação AIM\TCC\06 - PROGRAMAS\Supervisório\Software_Supervisório\obj\Debug\Software_Supervisório.Comunicação_arduino.resources
+C:\Users\spess\Desktop\Trab vitor\FATEC\Automação AIM\TCC\06 - PROGRAMAS\Supervisório\Software_Supervisório\obj\Debug\Software_Supervisório.Carregar_nova_imagem.resources

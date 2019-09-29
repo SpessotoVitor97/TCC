@@ -26,7 +26,7 @@ Partial Class Alterar_Equipamento
         Me.btnSalvar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DateTimePicker = New System.Windows.Forms.DateTimePicker()
-        Me.NúmeroDeSérieTextBox = New System.Windows.Forms.TextBox()
+        Me.Número_de_SérieTextBox = New System.Windows.Forms.TextBox()
         Me.FabricanteTextBox = New System.Windows.Forms.TextBox()
         Me.ModeloTextBox = New System.Windows.Forms.TextBox()
         Me.EquipamentoTextBox = New System.Windows.Forms.TextBox()
@@ -68,7 +68,7 @@ Partial Class Alterar_Equipamento
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.DateTimePicker)
-        Me.GroupBox1.Controls.Add(Me.NúmeroDeSérieTextBox)
+        Me.GroupBox1.Controls.Add(Me.Número_de_SérieTextBox)
         Me.GroupBox1.Controls.Add(Me.FabricanteTextBox)
         Me.GroupBox1.Controls.Add(Me.ModeloTextBox)
         Me.GroupBox1.Controls.Add(Me.EquipamentoTextBox)
@@ -97,12 +97,12 @@ Partial Class Alterar_Equipamento
         Me.DateTimePicker.Size = New System.Drawing.Size(257, 20)
         Me.DateTimePicker.TabIndex = 8
         '
-        'NúmeroDeSérieTextBox
+        'Número_de_SérieTextBox
         '
-        Me.NúmeroDeSérieTextBox.Location = New System.Drawing.Point(162, 206)
-        Me.NúmeroDeSérieTextBox.Name = "NúmeroDeSérieTextBox"
-        Me.NúmeroDeSérieTextBox.Size = New System.Drawing.Size(257, 20)
-        Me.NúmeroDeSérieTextBox.TabIndex = 16
+        Me.Número_de_SérieTextBox.Location = New System.Drawing.Point(162, 206)
+        Me.Número_de_SérieTextBox.Name = "Número_de_SérieTextBox"
+        Me.Número_de_SérieTextBox.Size = New System.Drawing.Size(257, 20)
+        Me.Número_de_SérieTextBox.TabIndex = 16
         '
         'FabricanteTextBox
         '
@@ -265,7 +265,7 @@ Partial Class Alterar_Equipamento
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents NúmeroDeSérieTextBox As TextBox
+    Friend WithEvents Número_de_SérieTextBox As TextBox
     Friend WithEvents FabricanteTextBox As TextBox
     Friend WithEvents ModeloTextBox As TextBox
     Friend WithEvents EquipamentoTextBox As TextBox

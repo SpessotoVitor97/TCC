@@ -4,18 +4,18 @@
 
     Private Sub NovoRegistro()
 
-        If dateTimePicker.Value.Date > Nothing Or unidadeTextBox.TextLength Or setorTextBox.TextLength Or dasaTextBox.TextLength Or equipamentoTextBox.TextLength Or modeloTextBox.TextLength Or fabricanteTextBox.TextLength Or numeroDeSerieTextBox.TextLength > 0 Then
+        If dateTimePicker.Value.Date > Nothing Or unidadeTextBox.TextLength Or setorTextBox.TextLength Or dasaTextBox.TextLength Or equipamentoTextBox.TextLength Or modeloTextBox.TextLength Or fabricanteTextBox.TextLength Or Número_de_SérieTextBox.TextLength > 0 Then
 
-            'Access.AddParams("@Data de aquisição", dateTimePicker.Value)
+            Access.AddParams("@Data_de_aquisição", dateTimePicker.Value.Date)
             Access.AddParams("@Unidade", unidadeTextBox.Text)
             Access.AddParams("@Setor", setorTextBox.Text)
             Access.AddParams("@DASA", dasaTextBox.Text)
             Access.AddParams("@Equipamento", equipamentoTextBox.Text)
             Access.AddParams("@Modelo", modeloTextBox.Text)
             Access.AddParams("@Fabricante", fabricanteTextBox.Text)
-            'Access.AddParams("@NumeroDeSerie", numeroDeSerieTextBox.Text)
+            Access.AddParams("@Número_de_Série", Número_de_SérieTextBox.Text)
 
-            Access.ExecuteQuery("INSERT INTO Equipamentos (Unidade, [Setor], [DASA], [Equipamento], [Modelo], [Fabricante]) VALUES (@Unidade, @Setor, @DASA, @Equipamentos, @Modelo, @Fabricante)")
+            Access.ExecuteQuery("INSERT INTO Equipamentos (Data_de_aquisição, [Unidade], [Setor], [DASA], [Equipamento], [Modelo], [Fabricante], [Número_de_Série]) VALUES (@Data_de_aquisição, @Unidade, @Setor, @DASA, @Equipamentos, @Modelo, @Fabricante, @Número_de_Série)")
 
         End If
     End Sub

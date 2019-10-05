@@ -27,7 +27,7 @@ Partial Class Form1
         Me.btnAlterar = New System.Windows.Forms.Button()
         Me.btnDeletar = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnUSB = New System.Windows.Forms.Button()
         CType(Me.dgvDados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -81,21 +81,21 @@ Partial Class Form1
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnUSB
         '
-        Me.Button2.Location = New System.Drawing.Point(608, 51)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 8
-        Me.Button2.Text = "USB"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnUSB.Location = New System.Drawing.Point(608, 51)
+        Me.btnUSB.Name = "btnUSB"
+        Me.btnUSB.Size = New System.Drawing.Size(75, 23)
+        Me.btnUSB.TabIndex = 8
+        Me.btnUSB.Text = "USB"
+        Me.btnUSB.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(776, 450)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnUSB)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnDeletar)
         Me.Controls.Add(Me.btnAlterar)
@@ -112,5 +112,5 @@ Partial Class Form1
     Friend WithEvents btnAlterar As Button
     Friend WithEvents btnDeletar As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnUSB As Button
 End Class

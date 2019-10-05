@@ -34,8 +34,7 @@
     End Sub
 
     Private Sub BtnDeletar_Click(sender As Object, e As EventArgs) Handles btnDeletar.Click
-        If MessageBox.Show("Parece que você está tentando remover um registro. Esta ação não poderá ser desfeita. Deseja continuar?", "Atenção",
-                           MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
+        If MessageBox.Show("Parece que você está tentando remover um registro. Esta ação não poderá ser desfeita. Deseja continuar?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
 
             Dados.AddParams("@Registro", dgvDados.CurrentRow.Cells(0).Value)
             Dados.ExecuteQuery("DELETE FROM Equipamentos WHERE Identificação = @Registro")
@@ -52,7 +51,7 @@
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub btnUSB_Click(sender As Object, e As EventArgs) Handles btnUSB.Click
         Comunicação_arduino.Show()
     End Sub
 End Class

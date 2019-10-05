@@ -1,18 +1,19 @@
 ﻿Imports System.IO
 Public Class Unidade1
 
+    Dim pbNewEquipment As New PictureBox
+
     Private Sub Unidade1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Timer1.Stop()
-        PictureBox1.Visible = True
         btnPararSimulação.Enabled = False
 
     End Sub
 
     Private Sub BtnSimularEvento_Click(sender As Object, e As EventArgs) Handles btnSimularEvento.Click
 
-        If PictureBox1.Visible = False Then
-            PictureBox1.Visible = True
+        If pbNewEquipment.Visible = False Then
+            pbNewEquipment.Visible = True
             Timer1.Start()
         Else
             Timer1.Start()
@@ -25,7 +26,7 @@ Public Class Unidade1
 
     Private Sub BtnPararSimulação_Click(sender As Object, e As EventArgs) Handles btnPararSimulação.Click
 
-        PictureBox1.Visible = True
+        pbNewEquipment.Visible = True
         Timer1.Stop()
         btnPararSimulação.Enabled = False
 
@@ -33,18 +34,44 @@ Public Class Unidade1
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
-        If PictureBox1.Visible = True Then
-            PictureBox1.Visible = False
+        If pbNewEquipment.Visible = True Then
+            pbNewEquipment.Visible = False
 
-        ElseIf PictureBox1.Visible = False Then
-            PictureBox1.Visible = True
+        ElseIf pbNewEquipment.Visible = False Then
+            pbNewEquipment.Visible = True
 
         End If
 
     End Sub
 
     Private Sub BtnCarregaImagem_Click(sender As Object, e As EventArgs) Handles btnCarregaImagem.Click
+        loadImageToFomrBackGround()
+    End Sub
 
+    Private Sub BtnNovoEquipamento_Click(sender As Object, e As EventArgs) Handles btnNovoEquipamento.Click
+        loadImageInEquipmentPictureBox()
+    End Sub
+
+    Sub loadImageInEquipmentPictureBox()
+        Dim newEquipmentImagePath As New OpenFileDialog
+        Dim newEquipmentImage As String
+
+        newEquipmentImagePath.InitialDirectory = Environment.SpecialFolder.MyComputer
+        If newEquipmentImagePath.ShowDialog = DialogResult.OK Then
+            newEquipmentImage = Path.GetFullPath(newEquipmentImagePath.FileName)
+        Else
+            MessageBox.Show("Por Favor, escolha uma imagem,", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
+
+        pbNewEquipment.Width = 228
+        pbNewEquipment.Height = 230
+        pbNewEquipment.Top = 0
+        pbNewEquipment.Left = 0
+        pbNewEquipment.ImageLocation = newEquipmentImage
+        Me.Controls.Add(pbNewEquipment)
+    End Sub
+
+    Sub loadImageToFomrBackGround()
         Dim Caminho As New OpenFileDialog
         Caminho.InitialDirectory = Environment.SpecialFolder.MyComputer
 
@@ -53,9 +80,7 @@ Public Class Unidade1
             bgImagem = Path.GetFullPath(Caminho.FileName)
             Me.BackgroundImage = Image.FromFile(bgImagem)
         End If
-
     End Sub
-
 End Class
 
 

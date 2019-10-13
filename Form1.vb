@@ -38,7 +38,7 @@
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnLocais.Click
         Localidades.Show()
         Me.Hide()
     End Sub
@@ -47,7 +47,7 @@
         Comunicação_arduino.Show()
     End Sub
 
-    Private Sub BtnLocalização_Click(sender As Object, e As EventArgs) Handles btnLocalização.Click
+    Private Sub BtnLocalização_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Obter_localização_dos_esquipamentos.Show()
     End Sub

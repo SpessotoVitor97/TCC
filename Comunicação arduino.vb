@@ -1,58 +1,79 @@
-﻿Imports System.Management
-Public Class Comunicação_arduino
+﻿Public Class Comunicação_arduino
 
-    Private WithEvents MonitoraDispositivo As ManagementEventWatcher
+    Private Access As New Controle
 
-    Private Sub BtnMonitorar_Click(sender As Object, e As EventArgs) Handles btnMonitorar.Click
-        Try
-            Dim consulta As String = "SELECT * FROM __InstanceOperationEvent WITHIN 10 WHERE TargetInstance ISA ""Win32_DiskDrive"""
-            MonitoraDispositivo = New ManagementEventWatcher(consulta)
-            MonitoraDispositivo.Start()
-            Label1.BackColor = Color.Green
-            Label1.Text = "ATIVO"
-            MonitoraDispositivo.WaitForNextEvent()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message + vbCrLf + ex.InnerException.ToString())
-        End Try
-    End Sub
+    Dim index = 0
+    Dim evento As String = ""
+    Dim data As Integer = 0
+    Dim horário As Integer = 0
+    Dim unidade As String = ""
+    Dim local As String = ""
+    Dim equipamento As String = ""
 
-    Private Sub Inserido(ByVal sender As Object, ByVal e As EventArrivedEventArgs) Handles MonitoraDispositivo.EventArrived
-        Dim mbo, obj As ManagementBaseObject
-        mbo = CType(e.NewEvent, ManagementBaseObject)
-        obj = CType(mbo("TargetInstance"), ManagementBaseObject)
-        Select Case mbo.ClassPath.ClassName
-            Case "__InstanceCreationEvent"
-                If obj("InterfaceType") = "USB" Then
-                    MsgBox(obj("Caption") & " (Drive letter " & GetLetraDriverDoDisco(obj("Name")) & ") foi CONECTADO !")
-                End If
-            Case "__InstanceDeletionEvent"
-                If obj("InterfaceType") = "USB" Then
-                    MsgBox(obj("Caption") & " foi DESCONECTADO !")
-                End If
-        End Select
-    End Sub
+    Private Sub BtnSplit_Click(sender As Object, e As EventArgs) Handles btnSplit.Click
+        Dim strDoArduino As String = TextBoxStringDeEntrada.Text
+        Dim separador() As Char
 
-    Private Function GetLetraDriverDoDisco(ByVal Name As String) As String
-        Dim oq_part, oq_disk As ObjectQuery
-        Dim mos_part, mos_disk As ManagementObjectSearcher
-        Dim obj_part, obj_disk As ManagementObject
-        Dim ans As String = ""
-        Name = Replace(Name, "\", "\\")
-        oq_part = New ObjectQuery("ASSOCIATORS OF _ {Win32_DiskDrive.DeviceID=""" & Name & """} WHERE AssocClass = Win32_DiskDriveToDiskPartition")
-        mos_part = New ManagementObjectSearcher(oq_part)
-        For Each obj_part In mos_part.Get()
-            oq_disk = New ObjectQuery("ASSOCIATORS OF {Win32_DiskPartition.DeviceID=""" & obj_part("DeviceID") & """} _
-                WHERE AssocClass = Win32_LogicalDiskToPartition")
-            mos_disk = New ManagementObjectSearcher(oq_disk)
-            For Each obj_disk In mos_disk.Get()
-                ans &= obj_disk("Name") & ","
-            Next
+        If TextBoxDelimitador.Text = String.Empty Then
+            separador = New Char() {" "c}
+        Else
+            separador = New Char() + TextBoxDelimitador.Text.ToCharArray
+        End If
+
+        Dim eventosArray = {}
+        Dim eventos As String() = strDoArduino.Split(separador)
+        ListBoxResultado.Items.Clear()
+        Dim evento As String
+        For Each evento In eventos
+            ListBoxResultado.Items.Add(evento)
+            eventosArray.Append(evento)
         Next
-        Return ans.Trim(","c)
-    End Function
 
+    End Sub
+
+    Private Sub BtnMoverParaBancoDeDados_Click(sender As Object, e As EventArgs) Handles btnMoverParaBancoDeDados.Click
+
+    End Sub
+
+    Sub moveToDataBase()
+        Dim quantidadeDeEventos As Integer = ListBoxResultado.Items.Count
+        Do While index <= quantidadeDeEventos
+            If index = 0 Then
+                Access.AddParams("@Evento", evento)
+                index += 1
+            ElseIf index = 1 Then
+                Access.AddParams("@Data", Data)
+                index += 1
+            ElseIf index = 2 Then
+                Access.AddParams("@Horário", horário)
+                index += 1
+            ElseIf index = 3 Then
+                Access.AddParams("@Unidade", unidade)
+                index += 1
+            ElseIf index = 4 Then
+                Access.AddParams("@Local", local)
+                index += 1
+            ElseIf index = 5 Then
+                Access.AddParams("@Equipamento", equipamento)
+                index += 1
+            End If
+            'Access.AddParams("@Evento", eventosArray)
+            'Access.AddParams("@Data/Horário", eventosArray)
+        Loop
+
+
+        'Consertar esse parâmetro
+        Access.AddParams("@Evento", ListBoxResultado.Items.IndexOf(index))
+        Access.AddParams("@Data", ListBoxResultado.Items.IndexOf(index))
+        Access.AddParams("@Horário", ListBoxResultado.Items.IndexOf(index))
+        Access.AddParams("@Unidade", ListBoxResultado.Items.IndexOf(index))
+        Access.AddParams("@Local", ListBoxResultado.Items.IndexOf(index))
+        Access.AddParams("@Equipamento", ListBoxResultado.Items.IndexOf(index))
+
+        Access.ExecuteQuery("INSERT INTO Eventos (Evento, [Data], [Horário], [Unidade], [Local], [Equipamento]) VALUES (@Evento, @Data, @Horário, @Unidade, @Local, @Equipamento)")
+    End Sub
 End Class
 
 
 'TODO: Adicionar o botão "Parar o Monitoramento";
-'Corrigir a detecção de quando o UBS é inserido;
+'Corrigir a detecção de quando o USB é inserido;

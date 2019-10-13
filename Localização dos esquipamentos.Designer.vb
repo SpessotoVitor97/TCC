@@ -58,7 +58,7 @@ Partial Class Obter_localização_dos_esquipamentos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(519, 292)
+        Me.ClientSize = New System.Drawing.Size(519, 311)
         Me.Controls.Add(Me.btnGravar)
         Me.Controls.Add(Me.btnObter)
         Me.Controls.Add(Me.TextBox1)

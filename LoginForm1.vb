@@ -1,12 +1,7 @@
 Public Class LoginForm1
 
-    ' TODO: Insert code to perform custom authentication using the provided username and password 
-    ' (See https://go.microsoft.com/fwlink/?LinkId=35339).  
-    ' The custom principal can then be attached to the current thread's principal as follows: 
-    '     My.User.CurrentPrincipal = CustomPrincipal
-    ' where CustomPrincipal is the IPrincipal implementation used to perform authentication. 
-    ' Subsequently, My.User will return identity information encapsulated in the CustomPrincipal object
-    ' such as the username, display name, etc.
+    Private Access As New Controle
+    Public Reader As OleDb.OleDbDataReader
 
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
         Me.Close()
@@ -14,6 +9,23 @@ Public Class LoginForm1
 
     Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
         Me.Close()
+    End Sub
+
+    Sub AutenticarUsuário(ByVal User As String, ByVal Password As String)
+
+        Access.AddParams("@Usuário", UsernameTextBox.Text)
+        Access.AddParams("@Senha", PasswordTextBox.Text)
+
+        Access.ExecuteQuery("SELECT * FROM Tab_Users WHERE Usuário = @Usuário, Senha = @Senha")
+
+        Dim userNameVerificator As String
+        Dim passwordVerificator As String
+
+        userNameVerificator = ""
+        passwordVerificator = ""
+
+        'TODO: Terminar os método de consulta no banco de dados para autenticação de usuário
+
     End Sub
 
 End Class

@@ -9,11 +9,8 @@
     End Sub
 
     Public Sub AtualizaRegistro()
-
         Dados.ExecuteQuery("SELECT * FROM Equipamentos")
-
         dgvDados.DataSource = Dados.DBDT
-
     End Sub
 
     Private Sub dgvDados_RowEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDados.RowEnter
@@ -35,23 +32,23 @@
 
     Private Sub BtnDeletar_Click(sender As Object, e As EventArgs) Handles btnDeletar.Click
         If MessageBox.Show("Parece que você está tentando remover um registro. Esta ação não poderá ser desfeita. Deseja continuar?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
-
             Dados.AddParams("@Registro", dgvDados.CurrentRow.Cells(0).Value)
             Dados.ExecuteQuery("DELETE FROM Equipamentos WHERE Identificação = @Registro")
             AtualizaRegistro()
-
         End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
         Localidades.Show()
-
         Me.Hide()
-
     End Sub
 
     Private Sub btnUSB_Click(sender As Object, e As EventArgs) Handles btnUSB.Click
         Comunicação_arduino.Show()
+    End Sub
+
+    Private Sub BtnLocalização_Click(sender As Object, e As EventArgs) Handles btnLocalização.Click
+        Me.Hide()
+        Obter_localização_dos_esquipamentos.Show()
     End Sub
 End Class

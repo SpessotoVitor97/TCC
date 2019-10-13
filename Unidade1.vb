@@ -45,22 +45,23 @@ Public Class Unidade1
     End Sub
 
     Private Sub BtnCarregaImagem_Click(sender As Object, e As EventArgs) Handles btnCarregaImagem.Click
-        loadImageToFomrBackGround()
+        LoadImageToFomrBackGround()
     End Sub
 
     Private Sub BtnNovoEquipamento_Click(sender As Object, e As EventArgs) Handles btnNovoEquipamento.Click
-        loadImageInEquipmentPictureBox()
+        LoadImageInEquipmentPictureBox()
     End Sub
 
-    Sub loadImageInEquipmentPictureBox()
+    Sub LoadImageInEquipmentPictureBox()
         Dim newEquipmentImagePath As New OpenFileDialog
-        Dim newEquipmentImage As String
+        Dim newEquipmentImage As String = ""
 
         newEquipmentImagePath.InitialDirectory = Environment.SpecialFolder.MyComputer
+
         If newEquipmentImagePath.ShowDialog = DialogResult.OK Then
             newEquipmentImage = Path.GetFullPath(newEquipmentImagePath.FileName)
         Else
-            MessageBox.Show("Por Favor, escolha uma imagem,", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Por Favor, escolha uma imagem.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
 
         pbNewEquipment.Width = 228
@@ -71,7 +72,7 @@ Public Class Unidade1
         Me.Controls.Add(pbNewEquipment)
     End Sub
 
-    Sub loadImageToFomrBackGround()
+    Sub LoadImageToFomrBackGround()
         Dim Caminho As New OpenFileDialog
         Caminho.InitialDirectory = Environment.SpecialFolder.MyComputer
 

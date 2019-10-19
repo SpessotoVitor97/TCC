@@ -5,7 +5,7 @@ Public Class Controle
 
     Private DBcmd As OleDbCommand
 
-    Private DBDA As OleDbDataAdapter
+    Public DBDA As OleDbDataAdapter
 
     Public DBDT As DataTable
 

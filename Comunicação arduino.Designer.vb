@@ -22,9 +22,6 @@ Partial Class Comunicação_arduino
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnMonitorar = New System.Windows.Forms.Button()
-        Me.btnParar = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBoxStringDeEntrada = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -33,37 +30,9 @@ Partial Class Comunicação_arduino
         Me.btnSplit = New System.Windows.Forms.Button()
         Me.ListBoxResultado = New System.Windows.Forms.ListBox()
         Me.btnMoverParaBancoDeDados = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Red
-        Me.Label1.ForeColor = System.Drawing.Color.Yellow
-        Me.Label1.Location = New System.Drawing.Point(140, 360)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(50, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "INATIVO"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'btnMonitorar
-        '
-        Me.btnMonitorar.Location = New System.Drawing.Point(77, 403)
-        Me.btnMonitorar.Name = "btnMonitorar"
-        Me.btnMonitorar.Size = New System.Drawing.Size(85, 35)
-        Me.btnMonitorar.TabIndex = 1
-        Me.btnMonitorar.Text = "Monitorar Dispositivos"
-        Me.btnMonitorar.UseVisualStyleBackColor = True
-        '
-        'btnParar
-        '
-        Me.btnParar.Location = New System.Drawing.Point(168, 403)
-        Me.btnParar.Name = "btnParar"
-        Me.btnParar.Size = New System.Drawing.Size(85, 35)
-        Me.btnParar.TabIndex = 2
-        Me.btnParar.Text = "Parar Monitoramento"
-        Me.btnParar.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -135,11 +104,20 @@ Partial Class Comunicação_arduino
         Me.btnMoverParaBancoDeDados.Text = "Mover para o Banco de Dados"
         Me.btnMoverParaBancoDeDados.UseVisualStyleBackColor = True
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 347)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(318, 163)
+        Me.DataGridView1.TabIndex = 12
+        '
         'Comunicação_arduino
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(355, 450)
+        Me.ClientSize = New System.Drawing.Size(349, 522)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnMoverParaBancoDeDados)
         Me.Controls.Add(Me.ListBoxResultado)
         Me.Controls.Add(Me.btnSplit)
@@ -148,19 +126,13 @@ Partial Class Comunicação_arduino
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TextBoxStringDeEntrada)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.btnParar)
-        Me.Controls.Add(Me.btnMonitorar)
-        Me.Controls.Add(Me.Label1)
         Me.Name = "Comunicação_arduino"
         Me.Text = "Comunicação_arduino"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
-    Friend WithEvents btnMonitorar As Button
-    Friend WithEvents btnParar As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBoxStringDeEntrada As TextBox
     Friend WithEvents Label3 As Label
@@ -169,4 +141,5 @@ Partial Class Comunicação_arduino
     Friend WithEvents btnSplit As Button
     Friend WithEvents ListBoxResultado As ListBox
     Friend WithEvents btnMoverParaBancoDeDados As Button
+    Friend WithEvents DataGridView1 As DataGridView
 End Class

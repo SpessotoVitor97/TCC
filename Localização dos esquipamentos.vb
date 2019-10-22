@@ -34,7 +34,7 @@ Public Class Obter_localização_dos_esquipamentos
     Public Async Sub Escreve(ByVal texto As String)
         Using streamWriter As New StreamWriter(strCaminho, True)
             Await streamWriter.WriteLineAsync(texto)
-            Print("Aqruivo salvo com sucesso!")
+            'Print("Aqruivo salvo com sucesso!")
         End Using
     End Sub
 

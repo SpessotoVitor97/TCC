@@ -3,21 +3,24 @@ Public Class Unidade1
 
     Public pbNewEquipment As New PictureBox
     Public pbEquipment As New PictureBox
-    Dim localização As New Obter_localização_dos_esquipamentos
     Dim separador() As Char = New Char() {","c}
 
-    Private Sub Unidade1_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
-        localização.Ler()
+    Public Sub Unidade1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        pbEquipment.Width = localização.kWidth
-        pbEquipment.Height = localização.kHeight
-        pbEquipment.Top = localização.kTop
-        pbEquipment.Left = localização.KLeft
-        pbEquipment.ImageLocation = localização.kImageLocation
+        Dim bgImagem As String
+
+        bgImagem = Localidades.LocalPath
+        Me.BackgroundImage = Image.FromFile(bgImagem)
+
+        Obter_localização_dos_esquipamentos.Ler()
+
+        pbEquipment.Width = Obter_localização_dos_esquipamentos.kWidth
+        pbEquipment.Height = Obter_localização_dos_esquipamentos.kHeight
+        pbEquipment.Top = Obter_localização_dos_esquipamentos.kTop
+        pbEquipment.Left = Obter_localização_dos_esquipamentos.KLeft
+        pbEquipment.ImageLocation = Obter_localização_dos_esquipamentos.kImageLocation
         Me.Controls.Add(pbEquipment)
-    End Sub
 
-    Private Sub Unidade1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Stop()
         btnPararSimulação.Enabled = False
 
@@ -89,10 +92,19 @@ Public Class Unidade1
     End Sub
 
     Sub SalvarProriedadesPbEquipment()
-        localização.Escreve(pbNewEquipment.Width & ";" & pbNewEquipment.Height & ";" & pbNewEquipment.Top & ";" & pbNewEquipment.Left & ";" & pbNewEquipment.ImageLocation)
-        localização.Escreve("")
+        'localização.Escreve(pbNewEquipment.Width & ";" & pbNewEquipment.Height & ";" & pbNewEquipment.Top & ";" & pbNewEquipment.Left & ";" & pbNewEquipment.ImageLocation)
+        'localização.Escreve("")
+        Obter_localização_dos_esquipamentos.Escreve(pbNewEquipment.Width)
+        Obter_localização_dos_esquipamentos.Escreve(pbNewEquipment.Height)
+        Obter_localização_dos_esquipamentos.Escreve(pbNewEquipment.Top)
+        Obter_localização_dos_esquipamentos.Escreve(pbNewEquipment.Left)
+        Obter_localização_dos_esquipamentos.Escreve(pbNewEquipment.ImageLocation)
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Hide()
+        Obter_localização_dos_esquipamentos.Show()
+    End Sub
 End Class
 
 

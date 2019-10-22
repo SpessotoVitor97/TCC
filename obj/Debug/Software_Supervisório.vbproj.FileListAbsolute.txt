@@ -49,7 +49,6 @@ C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervi
 C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\Software_Supervisório\obj\Debug\Software_Supervisório.Novo_Equipamento.resources
 C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\Software_Supervisório\obj\Debug\Software_Supervisório.Unidade1.resources
 C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\Software_Supervisório\obj\Debug\Software_Supervisório.vbproj.GenerateResource.cache
-C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\Software_Supervisório\obj\Debug\Software_Supervisório.vbproj.CoreCompileInputs.cache
 C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\Software_Supervisório\obj\Debug\Software_Supervisório.exe
 C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\Software_Supervisório\obj\Debug\Software_Supervisório.xml
 C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\Software_Supervisório\obj\Debug\Software_Supervisório.pdb

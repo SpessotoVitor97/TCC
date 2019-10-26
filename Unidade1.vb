@@ -9,6 +9,8 @@ Public Class Unidade1
 
         Dim bgImagem As String
 
+        Comunicação_arduino.SerialPort1.Write("L")
+
         bgImagem = Localidades.LocalPath
         Me.BackgroundImage = Image.FromFile(bgImagem)
 
@@ -70,11 +72,15 @@ Public Class Unidade1
         Else
             MessageBox.Show("Por Favor, escolha uma imagem.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
-
+        Dim kCursorTop As Integer = Cursor.Position.X
+        Dim kCursorLeft As Integer = Cursor.Position.Y
+        pbNewEquipment.SizeMode = 2
         pbNewEquipment.Width = 228
         pbNewEquipment.Height = 228
-        pbNewEquipment.Top = 100
-        pbNewEquipment.Left = 100
+        'pbNewEquipment.Top = 100
+        'pbNewEquipment.Left = 100
+        pbNewEquipment.Top = kCursorTop
+        pbNewEquipment.Left = kCursorLeft
         pbNewEquipment.ImageLocation = newEquipmentImage
         Me.Controls.Add(pbNewEquipment)
 
@@ -110,3 +116,4 @@ End Class
 
 'TODO: Criar um método que salva a imagem de fundo do form
 'TODO: Criar um método de carregar os equipamentos existentes quando o form for aparecer
+'TODO: Pesquisar sobre a propriedade Cursor

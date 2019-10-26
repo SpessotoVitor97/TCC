@@ -30,7 +30,6 @@ Partial Class Unidade1
         Me.btnPararSimulação = New System.Windows.Forms.Button()
         Me.btnNovoEquipamento = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnCarregaImagem
@@ -67,16 +66,10 @@ Partial Class Unidade1
         Me.Button1.Name = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Label1
-        '
-        resources.ApplyResources(Me.Label1, "Label1")
-        Me.Label1.Name = "Label1"
-        '
         'Unidade1
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnNovoEquipamento)
         Me.Controls.Add(Me.btnPararSimulação)
@@ -84,7 +77,6 @@ Partial Class Unidade1
         Me.Controls.Add(Me.btnCarregaImagem)
         Me.Name = "Unidade1"
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -94,5 +86,4 @@ Partial Class Unidade1
     Friend WithEvents btnPararSimulação As Button
     Friend WithEvents btnNovoEquipamento As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents Label1 As Label
 End Class

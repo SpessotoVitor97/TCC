@@ -25,6 +25,7 @@ Partial Class Obter_localização_dos_esquipamentos
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.btnObter = New System.Windows.Forms.Button()
         Me.btnGravar = New System.Windows.Forms.Button()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -33,7 +34,7 @@ Partial Class Obter_localização_dos_esquipamentos
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBox1.Size = New System.Drawing.Size(489, 251)
+        Me.TextBox1.Size = New System.Drawing.Size(227, 251)
         Me.TextBox1.TabIndex = 0
         '
         'btnObter
@@ -54,11 +55,20 @@ Partial Class Obter_localização_dos_esquipamentos
         Me.btnGravar.Text = "Gravar"
         Me.btnGravar.UseVisualStyleBackColor = True
         '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(247, 13)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(260, 251)
+        Me.TextBox2.TabIndex = 3
+        '
         'Obter_localização_dos_esquipamentos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(519, 311)
+        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.btnGravar)
         Me.Controls.Add(Me.btnObter)
         Me.Controls.Add(Me.TextBox1)
@@ -71,4 +81,5 @@ Partial Class Obter_localização_dos_esquipamentos
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents btnObter As Button
     Friend WithEvents btnGravar As Button
+    Friend WithEvents TextBox2 As TextBox
 End Class

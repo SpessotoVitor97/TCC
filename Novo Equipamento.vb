@@ -25,6 +25,7 @@
 
     Private Sub BtnSalvar_Click(sender As Object, e As EventArgs) Handles BtnSalvar.Click
         NovoRegistro()
+        Comunicação_arduino.SerialPort1.Write("G")
         Me.Hide()
         Form1.Show()
     End Sub

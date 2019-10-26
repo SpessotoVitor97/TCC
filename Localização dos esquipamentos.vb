@@ -10,6 +10,10 @@ Public Class Obter_localização_dos_esquipamentos
     Public KLeft As Integer
     Public kImageLocation As String
 
+    Dim index As Integer = 0
+
+    Dim propertiesArray(5) As String
+
 
     Private Sub BtnObter_Click(sender As Object, e As EventArgs) Handles btnObter.Click
         Ler()
@@ -20,13 +24,16 @@ Public Class Obter_localização_dos_esquipamentos
         Using streamReader As New StreamReader(strCaminho)
             Do While streamReader.Peek <> -1
                 TextBox1.Text = TextBox1.Text & streamReader.ReadLine & vbNewLine
+                propertiesArray.Append(TextBox1.Text(index))
+                index += 1
             Loop
 
-            kWidth &= streamReader.ReadLine
-            kHeight &= streamReader.ReadLine
-            kTop &= streamReader.ReadLine
-            KLeft &= streamReader.ReadLine
-            kImageLocation &= streamReader.ReadLine
+            For Each properties As String In propertiesArray
+                Debug.Print(properties)
+                TextBox2.Text = TextBox2.Text & properties & vbNewLine
+            Next
+
+            'TODO: Criar um vetor para armazenar o que o streamReader leu e só depois atribuir à variáveis
 
         End Using
     End Sub

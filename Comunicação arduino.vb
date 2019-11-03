@@ -9,7 +9,6 @@ Public Class Comunicação_arduino
     Dim Data As DateTime
     Dim Horário As String
     Dim comPORT As String
-    'Dim receivedData As String = ""
     Dim receivedData As String
 
     Private Sub Comunicação_arduino_Shown(sender As Object, e As EventArgs) Handles Me.Shown
@@ -17,31 +16,25 @@ Public Class Comunicação_arduino
     End Sub
 
     Private Sub Comunicação_arduino_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Timer1.Enabled = False
-        'comPORT = ""
+        ''TODO: Remover o comboBox e criar uma variável para armazenar a comboBox
+        TimeOutTimer.Enabled = False
         For Each SerialPort As String In My.Computer.Ports.SerialPortNames
             comPort_ComboBox.Items.Add(SerialPort)
         Next
+        TimeOutTimer.Interval = 10000
     End Sub
 
 
     Private Sub BtnSplit_Click(sender As Object, e As EventArgs) Handles btnSplit.Click
         Dim strDoArduino As String = TextBoxStringDeEntrada.Text
         Dim separador() As Char
-
-        If TextBoxDelimitador.Text = String.Empty Then
-            separador = New Char() {" "c}
-        Else
-            separador = New Char() + TextBoxDelimitador.Text.ToCharArray
-        End If
-
-        'separador = New Char() + "|".ToCharArray
-
         Dim eventosArray = {}
-        Dim eventos As String() = strDoArduino.Split(separador)
+        Dim eventos As String()
+
+        separador = New Char() + ",".ToCharArray
+        eventos = strDoArduino.Split(separador)
         ListBoxResultado.Items.Clear()
-        Dim evento As String
-        For Each evento In eventos
+        For Each evento As String In eventos
             ListBoxResultado.Items.Add(evento)
             eventosArray.Append(evento)
         Next
@@ -94,12 +87,13 @@ Public Class Comunicação_arduino
                 SerialPort1.Parity = Parity.None
                 SerialPort1.StopBits = StopBits.One
                 SerialPort1.Handshake = Handshake.None
-                SerialPort1.Encoding = System.Text.Encoding.Default 'very important!
-                SerialPort1.ReadTimeout = 10000
+                SerialPort1.Encoding = System.Text.Encoding.UTF8
+                SerialPort1.ReadTimeout = 20000
+                SerialPort1.WriteTimeout = 20000
 
                 SerialPort1.Open()
                 connect_BTN.Text = "Dis-connect"
-                Timer1.Enabled = True
+                TimeOutTimer.Enabled = True
                 Timer_LBL.Text = "Timer: ON"
             Else
                 MsgBox("Select a COM port first")
@@ -107,7 +101,7 @@ Public Class Comunicação_arduino
         Else
             SerialPort1.Close()
             connect_BTN.Text = "Connect"
-            Timer1.Enabled = False
+            TimeOutTimer.Enabled = False
             Timer_LBL.Text = "Timer: OFF"
         End If
 
@@ -115,17 +109,16 @@ Public Class Comunicação_arduino
     End Sub
 
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles TimeOutTimer.Tick
         receivedData = ReceiveSerialData()
         TextBoxStringDeEntrada.Text &= receivedData
-        SerialPort1.Close()
     End Sub
 
 
     Function ReceiveSerialData() As String
         Dim Incoming As String
         Try
-            Incoming = SerialPort1.ReadLine()
+            Incoming = SerialPort1.ReadExisting
             If Incoming Is Nothing Then
                 Return "nothing" & vbCrLf
             Else
@@ -138,6 +131,9 @@ Public Class Comunicação_arduino
     End Function
 
     Private Sub Clear_BTN_Click(sender As Object, e As EventArgs) Handles clear_BTN.Click
-        RichTextBox1.Text = ""
+        TextBoxStringDeEntrada.Text = ""
     End Sub
+
 End Class
+
+'' TODO: Criar um WHILE LOOP no arduino para escapar do timeout; O mesmo vale para o VB.

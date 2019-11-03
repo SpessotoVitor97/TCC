@@ -22,6 +22,7 @@ Partial Class Novo_Equipamento
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.equipamentoTextBox = New System.Windows.Forms.TextBox()
         Me.BtnSalvar = New System.Windows.Forms.Button()
         Me.BtnCancelar = New System.Windows.Forms.Button()
@@ -43,6 +44,9 @@ Partial Class Novo_Equipamento
         Me.equipamentoLabel = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.TimeOutTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.DelayTimerForModeSelection = New System.Windows.Forms.Timer(Me.components)
+        Me.DelayTimerForWriteStr = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -237,6 +241,15 @@ Partial Class Novo_Equipamento
         Me.Button1.Text = "Nova Imagem"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'TimeOutTimer
+        '
+        '
+        'DelayTimerForModeSelection
+        '
+        '
+        'DelayTimerForWriteStr
+        '
+        '
         'Novo_Equipamento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -279,4 +292,7 @@ Partial Class Novo_Equipamento
     Friend WithEvents dateTimePicker As DateTimePicker
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents TimeOutTimer As Timer
+    Friend WithEvents DelayTimerForModeSelection As Timer
+    Friend WithEvents DelayTimerForWriteStr As Timer
 End Class

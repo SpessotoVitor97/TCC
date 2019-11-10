@@ -9,7 +9,7 @@ Public Class Unidade1
 
         Dim bgImagem As String
 
-        Comunicação_arduino.SerialPort1.Write("L")
+        'Comunicação_arduino.SerialPort1.Write("L")
 
         bgImagem = Localidades.LocalPath
         Me.BackgroundImage = Image.FromFile(bgImagem)
@@ -25,8 +25,6 @@ Public Class Unidade1
 
         Timer1.Stop()
         btnPararSimulação.Enabled = False
-
-
 
     End Sub
 

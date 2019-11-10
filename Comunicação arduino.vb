@@ -16,13 +16,11 @@ Public Class Comunicação_arduino
     End Sub
 
     Private Sub Comunicação_arduino_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim mySerialPortList = {}
-
         ''TODO: Remover o comboBox e criar uma variável para armazenar a comboBox
         TimeOutTimer.Enabled = False
         For Each SerialPort As String In My.Computer.Ports.SerialPortNames
-            mySerialPortList.Append(SerialPort)
-            comPort_ComboBox.Items.Add(SerialPort)
+            'comPort_ComboBox.Items.Add(SerialPort)
+            comPORT = SerialPort
         Next
         TimeOutTimer.Interval = 10000
     End Sub
@@ -73,11 +71,11 @@ Public Class Comunicação_arduino
         Access.ExecuteQuery("INSERT INTO Eventos (Evento, [Unidade], [Local], [Equipamento], [Data], [Horário]) VALUES (@Evento, @Unidade, @Local, @Equipamento, @Data, @Horário)")
     End Sub
 
-    Private Sub ComPort_ComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles comPort_ComboBox.SelectedIndexChanged
-        If (comPort_ComboBox.SelectedItem <> "") Then
-            comPORT = comPort_ComboBox.SelectedItem
-        End If
-    End Sub
+    'Private Sub ComPort_ComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles comPort_ComboBox.SelectedIndexChanged
+    '    If (comPort_ComboBox.SelectedItem <> "") Then
+    '        comPORT = comPort_ComboBox.SelectedItem
+    '    End If
+    'End Sub
 
 
     Private Sub Connect_BTN_Click(sender As Object, e As EventArgs) Handles connect_BTN.Click

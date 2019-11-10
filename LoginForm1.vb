@@ -3,6 +3,8 @@ Imports System.Data.OleDb
 Public Class LoginForm1
 
     Private Access As New Controle
+    'Dim user As String
+    'Dim password As String
 
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
         AutenticarUsuário()
@@ -22,13 +24,12 @@ Public Class LoginForm1
         Access.DBDA.Fill(Access.DBDT)
 
         If Access.DBDT.Rows.Count > 0 Then
-            Label1.Text = Access.DBDT.Rows(0).Item("Usuário")
-            Label2.Text = Access.DBDT.Rows(0).Item("Senha")
+            'user = Access.DBDT.Rows(0).Item("Usuário")
+            'password = Access.DBDT.Rows(0).Item("Senha")
             Me.Hide()
             Form1.Show()
         Else
             MessageBox.Show("Usuário não encontrado. Por favor verifique se suas credencias estão corretas.", "Atenção", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning)
         End If
     End Sub
-
 End Class

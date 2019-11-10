@@ -4,11 +4,11 @@ Imports System.Windows.Forms
 Public Class Obter_localização_dos_esquipamentos
 
     Private Const strCaminho As String = "C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\Posição dos Equipamentos.txt"
-    Public kWidth As Integer
-    Public kHeight As Integer
-    Public kTop As Integer
-    Public KLeft As Integer
-    Public kImageLocation As String
+    Public kWidth As Integer = 228
+    Public kHeight As Integer = 228
+    Public kTop As Integer = 436
+    Public KLeft As Integer = 657
+    Public kImageLocation As String = "C : \Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\backupsystem_seagate_copiadeseguridad_1770.ico"
 
     Dim index As Integer = 0
 
@@ -28,10 +28,11 @@ Public Class Obter_localização_dos_esquipamentos
                 index += 1
             Loop
 
-            For Each properties As String In propertiesArray
-                Debug.Print(properties)
-                TextBox2.Text = TextBox2.Text & properties & vbNewLine
-            Next
+            'kWidth = 228
+            'kHeight = 228
+            'kTop = 436
+            'KLeft = 657
+            'kImageLocation = "C : \Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\backupsystem_seagate_copiadeseguridad_1770.ico"
 
             'TODO: Criar um vetor para armazenar o que o streamReader leu e só depois atribuir à variáveis
 

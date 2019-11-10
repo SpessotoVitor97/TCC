@@ -2,13 +2,9 @@
 
 Public Class Controle
     Private DBCon As New OleDbConnection("Provider = Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\Acesso.mdb")
-
     Private DBcmd As OleDbCommand
-
     Public DBDA As OleDbDataAdapter
-
     Public DBDT As DataTable
-
     Public Params As New List(Of OleDbParameter)
 
     Public Sub ExecuteQuery(ByVal Query As String)
@@ -46,9 +42,7 @@ Public Class Controle
     End Sub
 
     Public Sub AddParams(ByVal Nome As String, ByVal Valor As Object)
-
         Dim novo As New OleDbParameter(Nome, Valor)
-
         Params.Add(novo)
 
     End Sub

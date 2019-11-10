@@ -24,7 +24,8 @@ Public Class LoginForm1
         If Access.DBDT.Rows.Count > 0 Then
             Label1.Text = Access.DBDT.Rows(0).Item("Usuário")
             Label2.Text = Access.DBDT.Rows(0).Item("Senha")
-            'Me.Close()
+            Me.Hide()
+            Form1.Show()
         Else
             MessageBox.Show("Usuário não encontrado. Por favor verifique se suas credencias estão corretas.", "Atenção", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning)
         End If

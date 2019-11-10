@@ -26,6 +26,8 @@ Public Class Unidade1
         Timer1.Stop()
         btnPararSimulação.Enabled = False
 
+
+
     End Sub
 
     Private Sub BtnSimularEvento_Click(sender As Object, e As EventArgs) Handles btnSimularEvento.Click
@@ -110,6 +112,10 @@ Public Class Unidade1
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Hide()
         Obter_localização_dos_esquipamentos.Show()
+    End Sub
+
+    Private Sub Unidade1_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+
     End Sub
 End Class
 

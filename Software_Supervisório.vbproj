@@ -138,10 +138,10 @@
     <Compile Include="Novo Equipamento.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Localização dos esquipamentos.Designer.vb">
-      <DependentUpon>Localização dos esquipamentos.vb</DependentUpon>
+    <Compile Include="Localização dos equipamentos.Designer.vb">
+      <DependentUpon>Localização dos equipamentos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Localização dos esquipamentos.vb">
+    <Compile Include="Localização dos equipamentos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Unidade1.Designer.vb">
@@ -179,8 +179,8 @@
     <EmbeddedResource Include="Novo Equipamento.resx">
       <DependentUpon>Novo Equipamento.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Localização dos esquipamentos.resx">
-      <DependentUpon>Localização dos esquipamentos.vb</DependentUpon>
+    <EmbeddedResource Include="Localização dos equipamentos.resx">
+      <DependentUpon>Localização dos equipamentos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Unidade1.resx">
       <DependentUpon>Unidade1.vb</DependentUpon>

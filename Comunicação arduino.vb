@@ -16,9 +16,12 @@ Public Class Comunicação_arduino
     End Sub
 
     Private Sub Comunicação_arduino_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim mySerialPortList = {}
+
         ''TODO: Remover o comboBox e criar uma variável para armazenar a comboBox
         TimeOutTimer.Enabled = False
         For Each SerialPort As String In My.Computer.Ports.SerialPortNames
+            mySerialPortList.Append(SerialPort)
             comPort_ComboBox.Items.Add(SerialPort)
         Next
         TimeOutTimer.Interval = 10000

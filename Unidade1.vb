@@ -72,15 +72,15 @@ Public Class Unidade1
         Else
             MessageBox.Show("Por Favor, escolha uma imagem.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
-        Dim kCursorTop As Integer = Cursor.Position.X
-        Dim kCursorLeft As Integer = Cursor.Position.Y
+        'Dim kCursorTop As Integer = Cursor.Position.X
+        'Dim kCursorLeft As Integer = Cursor.Position.Y
         pbNewEquipment.SizeMode = 2
         pbNewEquipment.Width = 228
         pbNewEquipment.Height = 228
-        'pbNewEquipment.Top = 100
-        'pbNewEquipment.Left = 100
-        pbNewEquipment.Top = kCursorTop
-        pbNewEquipment.Left = kCursorLeft
+        pbNewEquipment.Top = 100
+        pbNewEquipment.Left = 100
+        'pbNewEquipment.Top = kCursorTop
+        'pbNewEquipment.Left = kCursorLeft
         pbNewEquipment.ImageLocation = newEquipmentImage
         Me.Controls.Add(pbNewEquipment)
 

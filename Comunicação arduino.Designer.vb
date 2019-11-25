@@ -24,7 +24,6 @@ Partial Class Comunicação_arduino
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBoxStringDeEntrada = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnSplit = New System.Windows.Forms.Button()
         Me.ListBoxResultado = New System.Windows.Forms.ListBox()
@@ -37,6 +36,7 @@ Partial Class Comunicação_arduino
         Me.connect_BTN = New System.Windows.Forms.Button()
         Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
         Me.TimeOutTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.TextBoxStringDeEntrada = New System.Windows.Forms.RichTextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -51,18 +51,6 @@ Partial Class Comunicação_arduino
         Me.Label2.Size = New System.Drawing.Size(91, 13)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "String de entrada:"
-        '
-        'TextBoxStringDeEntrada
-        '
-        Me.TextBoxStringDeEntrada.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBoxStringDeEntrada.Location = New System.Drawing.Point(12, 25)
-        Me.TextBoxStringDeEntrada.Multiline = True
-        Me.TextBoxStringDeEntrada.Name = "TextBoxStringDeEntrada"
-        Me.TextBoxStringDeEntrada.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBoxStringDeEntrada.Size = New System.Drawing.Size(738, 46)
-        Me.TextBoxStringDeEntrada.TabIndex = 4
         '
         'Label4
         '
@@ -191,11 +179,20 @@ Partial Class Comunicação_arduino
         '
         Me.TimeOutTimer.Interval = 500
         '
+        'TextBoxStringDeEntrada
+        '
+        Me.TextBoxStringDeEntrada.Location = New System.Drawing.Point(12, 25)
+        Me.TextBoxStringDeEntrada.Name = "TextBoxStringDeEntrada"
+        Me.TextBoxStringDeEntrada.Size = New System.Drawing.Size(738, 46)
+        Me.TextBoxStringDeEntrada.TabIndex = 32
+        Me.TextBoxStringDeEntrada.Text = ""
+        '
         'Comunicação_arduino
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(762, 522)
+        Me.Controls.Add(Me.TextBoxStringDeEntrada)
         Me.Controls.Add(Me.Timer_LBL)
         Me.Controls.Add(Me.comPort_ComboBox)
         Me.Controls.Add(Me.COMport_LBL)
@@ -206,7 +203,6 @@ Partial Class Comunicação_arduino
         Me.Controls.Add(Me.ListBoxResultado)
         Me.Controls.Add(Me.btnSplit)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBoxStringDeEntrada)
         Me.Controls.Add(Me.Label2)
         Me.Name = "Comunicação_arduino"
         Me.Text = "Comunicação_arduino"
@@ -216,7 +212,6 @@ Partial Class Comunicação_arduino
 
     End Sub
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBoxStringDeEntrada As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents btnSplit As Button
     Friend WithEvents ListBoxResultado As ListBox
@@ -229,4 +224,5 @@ Partial Class Comunicação_arduino
     Friend WithEvents connect_BTN As Button
     Friend WithEvents SerialPort1 As IO.Ports.SerialPort
     Friend WithEvents TimeOutTimer As Timer
+    Friend WithEvents TextBoxStringDeEntrada As RichTextBox
 End Class

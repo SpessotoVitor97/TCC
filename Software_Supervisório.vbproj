@@ -98,6 +98,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Controle.vb" />
+    <Compile Include="DecodificaçãoStringArduino.Designer.vb">
+      <DependentUpon>DecodificaçãoStringArduino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DecodificaçãoStringArduino.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>

@@ -9,22 +9,21 @@ Public Class Comunicação_arduino
     Dim Data As DateTime
     Dim Horário As String
     Dim comPORT As String
-    Dim receivedData As String
+    Dim receivedData As String = ""
 
     Private Sub Comunicação_arduino_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         AtualizaRegistro()
     End Sub
 
     Private Sub Comunicação_arduino_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ''TODO: Remover o comboBox e criar uma variável para armazenar a comboBox
         TimeOutTimer.Enabled = False
+        comPORT = ""
         For Each SerialPort As String In My.Computer.Ports.SerialPortNames
-            'comPort_ComboBox.Items.Add(SerialPort)
+            comPort_ComboBox.Items.Add(SerialPort)
             comPORT = SerialPort
         Next
         TimeOutTimer.Interval = 10000
     End Sub
-
 
     Private Sub BtnSplit_Click(sender As Object, e As EventArgs) Handles btnSplit.Click
         Dim strDoArduino As String = TextBoxStringDeEntrada.Text
@@ -71,12 +70,11 @@ Public Class Comunicação_arduino
         Access.ExecuteQuery("INSERT INTO Eventos (Evento, [Unidade], [Local], [Equipamento], [Data], [Horário]) VALUES (@Evento, @Unidade, @Local, @Equipamento, @Data, @Horário)")
     End Sub
 
-    'Private Sub ComPort_ComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles comPort_ComboBox.SelectedIndexChanged
-    '    If (comPort_ComboBox.SelectedItem <> "") Then
-    '        comPORT = comPort_ComboBox.SelectedItem
-    '    End If
-    'End Sub
-
+    Private Sub ComPort_ComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles comPort_ComboBox.SelectedIndexChanged
+        If (comPort_ComboBox.SelectedItem <> "") Then
+            comPORT = comPort_ComboBox.SelectedItem
+        End If
+    End Sub
 
     Private Sub Connect_BTN_Click(sender As Object, e As EventArgs) Handles connect_BTN.Click
         If (connect_BTN.Text = "Connect") Then
@@ -88,7 +86,7 @@ Public Class Comunicação_arduino
                 SerialPort1.Parity = Parity.None
                 SerialPort1.StopBits = StopBits.One
                 SerialPort1.Handshake = Handshake.None
-                SerialPort1.Encoding = System.Text.Encoding.UTF8
+                SerialPort1.Encoding = System.Text.Encoding.Default
                 SerialPort1.ReadTimeout = 20000
                 SerialPort1.WriteTimeout = 20000
 
@@ -119,15 +117,17 @@ Public Class Comunicação_arduino
     Function ReceiveSerialData() As String
         Dim Incoming As String
         Try
-            Incoming = SerialPort1.ReadExisting
+            Incoming = SerialPort1.ReadExisting()
             If Incoming Is Nothing Then
                 Return "nothing" & vbCrLf
             Else
                 Return Incoming
+
             End If
         Catch ex As TimeoutException
             Return "Error: Serial Port read timed out."
         End Try
+        Console.WriteLine(Incoming)
 
     End Function
 

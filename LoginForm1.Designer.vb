@@ -38,6 +38,7 @@ Partial Class LoginForm1
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
         Me.OK = New System.Windows.Forms.Button()
         Me.Cancel = New System.Windows.Forms.Button()
+        Me.LinkLabelNovoUser = New System.Windows.Forms.LinkLabel()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -100,6 +101,17 @@ Partial Class LoginForm1
         Me.Cancel.TabIndex = 5
         Me.Cancel.Text = "&Cancel"
         '
+        'LinkLabelNovoUser
+        '
+        Me.LinkLabelNovoUser.AutoSize = True
+        Me.LinkLabelNovoUser.LinkColor = System.Drawing.Color.Black
+        Me.LinkLabelNovoUser.Location = New System.Drawing.Point(175, 128)
+        Me.LinkLabelNovoUser.Name = "LinkLabelNovoUser"
+        Me.LinkLabelNovoUser.Size = New System.Drawing.Size(116, 13)
+        Me.LinkLabelNovoUser.TabIndex = 6
+        Me.LinkLabelNovoUser.TabStop = True
+        Me.LinkLabelNovoUser.Text = "Cadastrar novo usuário"
+        '
         'LoginForm1
         '
         Me.AcceptButton = Me.OK
@@ -107,6 +119,7 @@ Partial Class LoginForm1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel
         Me.ClientSize = New System.Drawing.Size(401, 192)
+        Me.Controls.Add(Me.LinkLabelNovoUser)
         Me.Controls.Add(Me.Cancel)
         Me.Controls.Add(Me.OK)
         Me.Controls.Add(Me.PasswordTextBox)
@@ -126,4 +139,6 @@ Partial Class LoginForm1
         Me.PerformLayout()
 
     End Sub
+
+    Friend WithEvents LinkLabelNovoUser As LinkLabel
 End Class

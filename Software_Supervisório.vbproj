@@ -150,6 +150,12 @@
     <Compile Include="Localização dos equipamentos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Novo Usuário.Designer.vb">
+      <DependentUpon>Novo Usuário.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Novo Usuário.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Unidade1.Designer.vb">
       <DependentUpon>Unidade1.vb</DependentUpon>
     </Compile>
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Localização dos equipamentos.resx">
       <DependentUpon>Localização dos equipamentos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Novo Usuário.resx">
+      <DependentUpon>Novo Usuário.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Unidade1.resx">
       <DependentUpon>Unidade1.vb</DependentUpon>

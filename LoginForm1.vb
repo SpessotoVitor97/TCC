@@ -32,4 +32,8 @@ Public Class LoginForm1
             MessageBox.Show("Usuário não encontrado. Por favor verifique se suas credencias estão corretas.", "Atenção", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning)
         End If
     End Sub
+
+    Private Sub LinkLabelNovoUser_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabelNovoUser.LinkClicked
+        Novo_Usuário.Show()
+    End Sub
 End Class

@@ -173,6 +173,9 @@
     <EmbeddedResource Include="Comunicação arduino.resx">
       <DependentUpon>Comunicação arduino.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DecodificaçãoStringArduino.resx">
+      <DependentUpon>DecodificaçãoStringArduino.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>

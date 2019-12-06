@@ -10,6 +10,24 @@ Public Class Comunicação_arduino
     Dim Horário As String
     Dim comPORT As String
     Dim receivedData As String = ""
+    Dim labelDictinoary As New Dictionary(Of String, String)
+    Dim par As New KeyValuePair(Of String, String)
+
+    'Dim label1 As String = ""
+    'Dim label2 As String = ""
+    'Dim label3 As String = ""
+    'Dim label4 As String = ""
+    'Dim label5 As String = ""
+    'Dim label6 As String = ""
+    'Dim label7 As String = ""
+    'Dim label8 As String = ""
+    'Dim label9 As String = ""
+    'Dim label10 As String = ""
+    'Dim label11 As String = ""
+    'Dim label12 As String = ""
+    'Dim label13 As String = ""
+    'Dim label14 As String = ""
+    'Dim label15 As String = ""
 
     Private Sub Comunicação_arduino_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         AtualizaRegistro()
@@ -127,7 +145,29 @@ Public Class Comunicação_arduino
         Catch ex As TimeoutException
             Return "Error: Serial Port read timed out."
         End Try
-        Console.WriteLine(Incoming)
+
+    End Function
+
+    Function DecodeSerialData() As String
+        labelDictinoary.Add("label1", "Perda de conexão, Fatec, Sala 01, Notebook")
+        labelDictinoary.Add("label2", "Perda de conexão, Fatec, Sala 02, Celular")
+        labelDictinoary.Add("label3", "Perda de conexão, Fatec, Sala 03, Relógio")
+        labelDictinoary.Add("label4", "Perda de conexão, Fatec, Sala 04, Transdutor")
+        labelDictinoary.Add("label5", "Perda de conexão, Fatec, Sala 05, oxímetro")
+        labelDictinoary.Add("label6", "Perda de conexão, Fatec, Sala 06, Ultrassom")
+        labelDictinoary.Add("label7", "Perda de conexão, Fatec, Sala 07, Termômetro IR")
+        labelDictinoary.Add("label8", "Perda de conexão, Fatec, Sala 08, Medidor de pressão")
+        labelDictinoary.Add("label9", "Perda de conexão, Fatec, Sala 09, Centrífuga de sangue")
+        labelDictinoary.Add("label10", "Perda de conexão, Fatec, Sala 10, Roteador")
+        labelDictinoary.Add("label11", "Perda de conexão, Fatec, Sala 11, Switch")
+        labelDictinoary.Add("label12", "Perda de conexão, Fatec, Sala 12, Servidor")
+        labelDictinoary.Add("label13", "Perda de conexão, Fatec, Sala 13, Monitor cardíaco")
+        labelDictinoary.Add("label14", "Perda de conexão, Fatec, Sala 14, Auto-clave digital")
+        labelDictinoary.Add("label15", "Perda de conexão, Fatec, Sala 15, Oftalmoscópio")
+
+        For Each key As String In labelDictinoary
+
+        Next
 
     End Function
 
@@ -136,5 +176,3 @@ Public Class Comunicação_arduino
     End Sub
 
 End Class
-
-'' TODO: Criar um WHILE LOOP no arduino para escapar do timeout; O mesmo vale para o VB.

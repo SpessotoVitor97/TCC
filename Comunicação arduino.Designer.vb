@@ -23,8 +23,8 @@ Partial Class Comunicação_arduino
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.LblStringDeEntrada = New System.Windows.Forms.Label()
+        Me.LblResultado = New System.Windows.Forms.Label()
         Me.btnSplit = New System.Windows.Forms.Button()
         Me.ListBoxResultado = New System.Windows.Forms.ListBox()
         Me.btnMoverParaBancoDeDados = New System.Windows.Forms.Button()
@@ -40,29 +40,29 @@ Partial Class Comunicação_arduino
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label2
+        'LblStringDeEntrada
         '
-        Me.Label2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.LblStringDeEntrada.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 9)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(91, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "String de entrada:"
+        Me.LblStringDeEntrada.AutoSize = True
+        Me.LblStringDeEntrada.Location = New System.Drawing.Point(12, 9)
+        Me.LblStringDeEntrada.Name = "LblStringDeEntrada"
+        Me.LblStringDeEntrada.Size = New System.Drawing.Size(91, 13)
+        Me.LblStringDeEntrada.TabIndex = 3
+        Me.LblStringDeEntrada.Text = "String de entrada:"
         '
-        'Label4
+        'LblResultado
         '
-        Me.Label4.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.LblResultado.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(15, 139)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(58, 13)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Resultado:"
+        Me.LblResultado.AutoSize = True
+        Me.LblResultado.Location = New System.Drawing.Point(15, 139)
+        Me.LblResultado.Name = "LblResultado"
+        Me.LblResultado.Size = New System.Drawing.Size(58, 13)
+        Me.LblResultado.TabIndex = 7
+        Me.LblResultado.Text = "Resultado:"
         '
         'btnSplit
         '
@@ -202,8 +202,8 @@ Partial Class Comunicação_arduino
         Me.Controls.Add(Me.btnMoverParaBancoDeDados)
         Me.Controls.Add(Me.ListBoxResultado)
         Me.Controls.Add(Me.btnSplit)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.LblResultado)
+        Me.Controls.Add(Me.LblStringDeEntrada)
         Me.Name = "Comunicação_arduino"
         Me.Text = "Comunicação_arduino"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -211,8 +211,8 @@ Partial Class Comunicação_arduino
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents LblStringDeEntrada As Label
+    Friend WithEvents LblResultado As Label
     Friend WithEvents btnSplit As Button
     Friend WithEvents ListBoxResultado As ListBox
     Friend WithEvents btnMoverParaBancoDeDados As Button

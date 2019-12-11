@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class Resumo
 
     Private Dados As New Controle
     Private intReg As Integer

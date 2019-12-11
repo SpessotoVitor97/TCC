@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class Resumo
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -90,7 +90,7 @@ Partial Class Form1
         Me.btnUSB.Text = "USB"
         Me.btnUSB.UseVisualStyleBackColor = True
         '
-        'Form1
+        'Resumo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -101,8 +101,8 @@ Partial Class Form1
         Me.Controls.Add(Me.btnAlterar)
         Me.Controls.Add(Me.btnNovoEquipamento)
         Me.Controls.Add(Me.dgvDados)
-        Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Name = "Resumo"
+        Me.Text = "Resumo"
         CType(Me.dgvDados, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

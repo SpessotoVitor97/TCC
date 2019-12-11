@@ -42,7 +42,6 @@ C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervi
 C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\Software_Supervisório\obj\Debug\Software_Supervisório.Alterar_Equipamento.resources
 C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\Software_Supervisório\obj\Debug\Software_Supervisório.Carregar_nova_imagem.resources
 C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\Software_Supervisório\obj\Debug\Software_Supervisório.Comunicação_arduino.resources
-C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\Software_Supervisório\obj\Debug\Software_Supervisório.Form1.resources
 C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\Software_Supervisório\obj\Debug\Software_Supervisório.Localidades.resources
 C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\Software_Supervisório\obj\Debug\Software_Supervisório.LoginForm1.resources
 C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\Software_Supervisório\obj\Debug\Software_Supervisório.Resources.resources
@@ -55,3 +54,4 @@ C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervi
 C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\Software_Supervisório\obj\Debug\Software_Supervisório.Obter_localização_dos_esquipamentos.resources
 C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\Software_Supervisório\obj\Debug\Software_Supervisório.Novo_Usuário.resources
 C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\Software_Supervisório\obj\Debug\Software_Supervisório.DecodificaçãoStringArduino.resources
+C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\Software_Supervisório\obj\Debug\Software_Supervisório.Resumo.resources

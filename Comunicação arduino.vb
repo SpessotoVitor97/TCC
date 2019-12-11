@@ -137,7 +137,7 @@ Public Class Comunicação_arduino
         labelDictinoary.Add("label1", "Perda de conexão, Fatec,Sala 01, Notebook")
         labelDictinoary.Add("label2", "Perda de conexão, Fatec,Sala 02, Celular")
         labelDictinoary.Add("label3", "Perda de conexão, Fatec,Sala 03, Relógio")
-        labelDictinoary.Add("label4", "Perda de conexão, Fatec,Sala 04, Transdutor")
+        labelDictinoary.Add("label4", "Perda de conexão, Fatec,Sala 04, Oftalmoscópio")
         labelDictinoary.Add("label5", "Perda de conexão, Fatec,Sala 05, Oxímetro")
         labelDictinoary.Add("label6", "Perda de conexão, Fatec,Sala 06, Ultrassom")
         labelDictinoary.Add("label7", "Perda de conexão, Fatec,Sala 07, Termômetro IR")
@@ -148,7 +148,7 @@ Public Class Comunicação_arduino
         labelDictinoary.Add("label12", "Perda de conexão, Fatec,Sala 12, Servidor")
         labelDictinoary.Add("label13", "Perda de conexão, Fatec,Sala 13, Monitor cardíaco")
         labelDictinoary.Add("label14", "Perda de conexão, Fatec,Sala 14, Auto-clave digital")
-        labelDictinoary.Add("label15", "Perda de conexão, Fatec,Sala 15, Oftalmoscópio")
+        labelDictinoary.Add("label15", "Perda de conexão, Fatec,Sala 15, Transdutor")
 
         Dim keysArray = {"label", "label2", "label3", "label4", "label5", "label6", "label7", "label9", "label10", "label11", "label12", "label13", "label14", "label15"}
 

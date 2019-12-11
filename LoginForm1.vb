@@ -27,7 +27,7 @@ Public Class LoginForm1
             'user = Access.DBDT.Rows(0).Item("Usuário")
             'password = Access.DBDT.Rows(0).Item("Senha")
             Me.Hide()
-            Form1.Show()
+            Resumo.Show()
         Else
             MessageBox.Show("Usuário não encontrado. Por favor verifique se suas credencias estão corretas.", "Atenção", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning)
         End If

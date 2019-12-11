@@ -12,9 +12,9 @@
 
     Private Sub BtnSalvar_Click(sender As Object, e As EventArgs) Handles BtnSalvar.Click
         NovoRegistro()
-        GravarNoArduino()
+        'GravarNoArduino()
         Me.Hide()
-        Form1.Show()
+        Resumo.Show()
     End Sub
 
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
@@ -36,26 +36,26 @@
 
     End Sub
 
-    Public Sub GravarNoArduino()
-        Dim strToArduino As String
+    'Public Sub GravarNoArduino()
+    '    Dim strToArduino As String
 
-        TimeOutTimer.Interval = 20000
-        strToArduino = CStr(unidadeTextBox.Text & "," & setorTextBox.Text & "," & dasaTextBox.Text & "," & equipamentoTextBox.Text & "," & modeloTextBox.Text & "," & fabricanteTextBox.Text & "," & Número_de_SérieTextBox.Text & "#")
+    '    TimeOutTimer.Interval = 20000
+    '    strToArduino = CStr(unidadeTextBox.Text & "," & setorTextBox.Text & "," & dasaTextBox.Text & "," & equipamentoTextBox.Text & "," & modeloTextBox.Text & "," & fabricanteTextBox.Text & "," & Número_de_SérieTextBox.Text & "#")
 
-        Try
-            Comunicação_arduino.SerialPort1.Open()
-            TimeOutTimer.Start()
-            WaitFor(3)
-            Comunicação_arduino.SerialPort1.Write("G")
-            WaitFor(3)
-            Comunicação_arduino.SerialPort1.Write(strToArduino)
-            Comunicação_arduino.SerialPort1.Close()
-            TimeOutTimer.Stop()
-        Catch ex As Exception
-            MessageBox.Show("Algo deu errado, por favor tente novamente mais tarde.", "Software Supervisório", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End Try
+    '    Try
+    '        Comunicação_arduino.SerialPort1.Open()
+    '        TimeOutTimer.Start()
+    '        WaitFor(3)
+    '        Comunicação_arduino.SerialPort1.Write("G")
+    '        WaitFor(3)
+    '        Comunicação_arduino.SerialPort1.Write(strToArduino)
+    '        Comunicação_arduino.SerialPort1.Close()
+    '        TimeOutTimer.Stop()
+    '    Catch ex As Exception
+    '        MessageBox.Show("Algo deu errado, por favor tente novamente mais tarde.", "Software Supervisório", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    '    End Try
 
-    End Sub
+    'End Sub
 
     Private Sub TimeOutTimer_Tick(sender As Object, e As EventArgs) Handles TimeOutTimer.Tick
         Do Until timeOut

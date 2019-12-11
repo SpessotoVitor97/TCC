@@ -9,7 +9,7 @@ Public Class Unidade1
 
         Dim bgImagem As String
 
-        'Comunicação_arduino.SerialPort1.Write("L")
+        Comunicação_arduino.SerialPort1.Write("L")
 
         bgImagem = Localidades.LocalPath
         Me.BackgroundImage = Image.FromFile(bgImagem)

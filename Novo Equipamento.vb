@@ -37,7 +37,6 @@
     End Sub
 
     Public Sub GravarNoArduino()
-        Dim timeOutComunication As Integer
         Dim strToArduino As String
 
         TimeOutTimer.Interval = 20000

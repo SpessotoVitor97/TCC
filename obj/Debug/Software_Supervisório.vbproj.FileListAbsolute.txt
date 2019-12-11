@@ -54,3 +54,4 @@ C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervi
 C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\Software_Supervisório\obj\Debug\Software_Supervisório.pdb
 C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\Software_Supervisório\obj\Debug\Software_Supervisório.Obter_localização_dos_esquipamentos.resources
 C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\Software_Supervisório\obj\Debug\Software_Supervisório.Novo_Usuário.resources
+C:\Users\spess\Desktop\Trab-Vitor\FATEC\Automação-AIM\TCC\06-PROGRAMAS\Supervisorio\Software_Supervisório\obj\Debug\Software_Supervisório.DecodificaçãoStringArduino.resources
